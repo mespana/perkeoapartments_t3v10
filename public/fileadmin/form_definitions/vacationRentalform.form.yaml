@@ -1,0 +1,118 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: vacationRentalform
+label: 'Vacation Rental form'
+prototypeName: standard
+finishers:
+  -
+    options:
+      pageUid: '1'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: form
+    label: ''
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-2
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            properties:
+              fluidAdditionalAttributes:
+                step: 1
+                placeholder: Nights
+                required: required
+                min: '1'
+                max: '30'
+            type: Number
+            identifier: number-1
+            label: 'Number of nights'
+            validators:
+              -
+                identifier: Number
+              -
+                identifier: NotEmpty
+              -
+                options:
+                  minimum: '1'
+                  maximum: '30'
+                identifier: NumberRange
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            properties:
+              fluidAdditionalAttributes:
+                min: ''
+                max: ''
+                step: 1
+            type: Date
+            identifier: date-3
+            label: Check-in
+          -
+            defaultValue: ''
+            properties:
+              fluidAdditionalAttributes:
+                min: ''
+                max: ''
+                step: 1
+            type: Date
+            identifier: date-4
+            label: Check-Out
+      -
+        type: GridRow
+        identifier: gridrow-3
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: '1'
+            properties:
+              fluidAdditionalAttributes:
+                step: 1
+                required: required
+                min: '1'
+                max: '10'
+            type: Number
+            identifier: number-2
+            label: 'Number of Adults'
+            validators:
+              -
+                identifier: Number
+              -
+                identifier: NotEmpty
+              -
+                options:
+                  minimum: '1'
+                  maximum: '10'
+                identifier: NumberRange
+          -
+            defaultValue: ''
+            properties:
+              fluidAdditionalAttributes:
+                step: 1
+                min: '0'
+                max: '7'
+            type: Number
+            identifier: number-3
+            label: 'Number of children'
+            validators:
+              -
+                identifier: Number
+              -
+                options:
+                  minimum: '0'
+                  maximum: '7'
+                identifier: NumberRange
