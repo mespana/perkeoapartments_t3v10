@@ -7,10 +7,10 @@ require 'recipe/typo3.php';
 set('application', 'typo3-project3');
 
 // Project repository
-set('repository', 'https://github.com/mespana/typo3-project3.git');
+// set('repository', 'https://github.com/mespana/typo3-project3.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true);
+// set('git_tty', false);
 
 // To solve this issue: Cant't detect http user name. Please set up the 'http_user' config parameter.
 set('http_user', 'www-data');
@@ -21,7 +21,7 @@ set('use_relative_symlink', '0');
 // Hosts
 
 host('ftp109730-2622751@marianaespana.com')
-    ->set('deploy_path', '~/www/marianaespana/proyectos/typo3-project3/');
+    ->set('deploy_path', '~/www/marianaespana/perkeoapartments/');
 
 //DocumentRoot / WebRoot for the TYPO3 automaticInstallation
 set('typo3_webroot', 'public');

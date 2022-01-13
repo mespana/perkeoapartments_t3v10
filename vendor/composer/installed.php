@@ -1,13 +1,13 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '67e10e73925a52cd0326616441c913e09695087a',
         'name' => 'typo3/cms-base-distribution',
-        'dev' => false,
+        'dev' => true,
     ),
     'versions' => array(
         'bk2k/bootstrap-package' => array(
@@ -24,6 +24,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'deployer/dist' => array(
+            'pretty_version' => 'v6.8.0',
+            'version' => '6.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../deployer/dist',
+            'aliases' => array(),
+            'reference' => '857158fa5466d5135ce87f07fe67779b6b6a13d2',
+            'dev_requirement' => true,
         ),
         'dmind/cookieman' => array(
             'pretty_version' => '2.9.11',
@@ -713,12 +722,12 @@
             'dev_requirement' => false,
         ),
         'typo3/cms-base-distribution' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '67e10e73925a52cd0326616441c913e09695087a',
             'dev_requirement' => false,
         ),
         'typo3/cms-belog' => array(
