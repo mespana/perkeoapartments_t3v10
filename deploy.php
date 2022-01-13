@@ -4,13 +4,13 @@ namespace Deployer;
 require 'recipe/typo3.php';
 
 // Project name
-set('application', 'typo3-project3');
+set('application', 'vacationRental-v10');
 
 // Project repository
-// set('repository', 'https://github.com/mespana/typo3-project3.git');
+set('repository', 'https://github.com/mespana/perkeoapartments_t3v10.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-// set('git_tty', false);
+set('git_tty', true);
 
 // To solve this issue: Cant't detect http user name. Please set up the 'http_user' config parameter.
 set('http_user', 'www-data');
