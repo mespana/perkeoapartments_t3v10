@@ -465,26 +465,43 @@ class TreeController
                 $permClause
             );
         }
+        $rootRecord = [
+            'uid' => 0,
+            'title' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] ?: 'TYPO3',
+        ];
         $entryPointRecords = [];
+        $mountPoints = [];
         if ($entryPointIds === null) {
-            $rootRecord = [
-                'uid' => 0,
-                'title' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['sitename'] ?: 'TYPO3',
-            ];
-
             //watch out for deleted pages returned as webmount
             $mountPoints = array_map('intval', $backendUser->returnWebmounts());
             $mountPoints = array_unique($mountPoints);
+
+            // Switch to multiple-entryPoint-mode if the rootPage is to be mounted.
+            // (other mounts would appear duplicated in the pid = 0 tree otherwise)
+            if (in_array(0, $mountPoints, true)) {
+                $entryPointIds = $mountPoints;
+            }
+
             $hiddenRecords = $this->hiddenRecords;
             $mountPoints = array_filter($mountPoints, function ($id) use ($hiddenRecords) {
                 return !in_array($id, $hiddenRecords, true);
             });
+        }
 
+        if ($entryPointIds === null) {
             if ($query !== '') {
                 $rootRecord = $repository->getTree(0, null, $mountPoints, true);
             } else {
                 $rootRecord = $repository->getTreeLevels($rootRecord, $this->levelsToFetch, $mountPoints);
             }
+
+            $mountPointOrdering = array_flip($mountPoints);
+            if (isset($rootRecord['_children'])) {
+                usort($rootRecord['_children'], static function ($a, $b) use ($mountPointOrdering) {
+                    return ($mountPointOrdering[$a['uid']] ?? 0) <=> ($mountPointOrdering[$b['uid']] ?? 0);
+                });
+            }
+
             $entryPointRecords[] = $rootRecord;
         } else {
             $hiddenRecords = $this->hiddenRecords;
@@ -493,13 +510,17 @@ class TreeController
             });
             $this->calculateBackgroundColors($entryPointIds);
             foreach ($entryPointIds as $k => $entryPointId) {
-                $entryPointRecord = BackendUtility::getRecordWSOL('pages', $entryPointId, '*', $permClause);
+                if ($entryPointId === 0) {
+                    $entryPointRecord = $rootRecord;
+                } else {
+                    $entryPointRecord = BackendUtility::getRecordWSOL('pages', $entryPointId, '*', $permClause);
 
-                if ($entryPointRecord !== null && !$backendUser->isInWebMount($entryPointId)) {
-                    $entryPointRecord = null;
-                }
-                if ($entryPointRecord === null) {
-                    continue;
+                    if ($entryPointRecord !== null && !$backendUser->isInWebMount($entryPointId)) {
+                        $entryPointRecord = null;
+                    }
+                    if ($entryPointRecord === null) {
+                        continue;
+                    }
                 }
 
                 $entryPointRecord['uid'] = (int)$entryPointRecord['uid'];

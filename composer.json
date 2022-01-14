@@ -21,6 +21,7 @@
 	"require": {
 		"dmind/cookieman": "^2.9",
 		"gowords/vacation-rental": "^1.0",
+		"helhum/typo3-console": "^6.6",
 		"typo3/cms-backend": "^10.4",
 		"typo3/cms-belog": "^10.4",
 		"typo3/cms-beuser": "^10.4",
