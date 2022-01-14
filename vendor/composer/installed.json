@@ -113,46 +113,6 @@
             "install-path": "../../public/typo3conf/ext/bootstrap_package"
         },
         {
-            "name": "deployer/dist",
-            "version": "v6.8.0",
-            "version_normalized": "6.8.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/deployphp/distribution.git",
-                "reference": "857158fa5466d5135ce87f07fe67779b6b6a13d2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/distribution/zipball/857158fa5466d5135ce87f07fe67779b6b6a13d2",
-                "reference": "857158fa5466d5135ce87f07fe67779b6b6a13d2",
-                "shasum": ""
-            },
-            "time": "2020-04-25T18:48:50+00:00",
-            "bin": [
-                "dep"
-            ],
-            "type": "library",
-            "installation-source": "dist",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Medvedev",
-                    "email": "anton@medv.io"
-                }
-            ],
-            "description": "Deployer Phar Distribution",
-            "homepage": "https://deployer.org",
-            "support": {
-                "docs": "https://deployer.org/docs",
-                "issues": "https://github.com/deployphp/deployer/issues",
-                "source": "https://github.com/deployphp/deployer"
-            },
-            "install-path": "../deployer/dist"
-        },
-        {
             "name": "dmind/cookieman",
             "version": "2.9.11",
             "version_normalized": "2.9.11.0",
@@ -944,21 +904,19 @@
             "dist": {
                 "type": "path",
                 "url": "packages/vacation_rental",
-                "reference": "d67ed4861932cb0a095189eccd25899435730434"
+                "reference": "1c04ea6db8a8dbff0a92699b8480095b6be98127"
             },
             "require": {
-                "bk2k/bootstrap-package": "^12.0",
-                "typo3/cms-core": "^10.0"
+                "bk2k/bootstrap-package": "^12.0"
             },
             "replace": {
-                "typo3-ter/vacation-rental": "self.version"
+                "gowords/vacationrental": "self.version",
+                "typo3-ter/vacationrental": "self.version"
             },
             "type": "typo3-cms-extension",
             "extra": {
                 "typo3/cms": {
-                    "extension-key": "vacation_rental",
-                    "web-dir": ".build/web",
-                    "app-dir": ".build"
+                    "extension-key": "vacation_rental"
                 }
             },
             "installation-source": "dist",
@@ -967,15 +925,13 @@
                     "Gowords\\VacationRental\\": "Classes/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Gowords\\VacationRental\\Tests\\": "Tests"
-                }
-            },
             "license": [
                 "GPL-2.0-or-later"
             ],
             "description": "Sitepackage Perkeo Apartments",
+            "keywords": [
+                "Typo3 Sitepackage"
+            ],
             "transport-options": {
                 "relative": true
             },
@@ -6718,7 +6674,5 @@
         }
     ],
     "dev": true,
-    "dev-package-names": [
-        "deployer/dist"
-    ]
+    "dev-package-names": []
 }

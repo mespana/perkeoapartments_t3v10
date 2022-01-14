@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e97f1ed91370a0e02e3188dd6d7b2081d140c4f2',
+        'reference' => '9ba00517913fa7d1d5f4a7fca4a935af8f95de72',
         'name' => 'typo3/cms-base-distribution',
         'dev' => true,
     ),
@@ -24,15 +24,6 @@
             'replaced' => array(
                 0 => '*',
             ),
-        ),
-        'deployer/dist' => array(
-            'pretty_version' => 'v6.8.0',
-            'version' => '6.8.0.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../deployer/dist',
-            'aliases' => array(),
-            'reference' => '857158fa5466d5135ce87f07fe67779b6b6a13d2',
-            'dev_requirement' => true,
         ),
         'dmind/cookieman' => array(
             'pretty_version' => '2.9.11',
@@ -130,8 +121,14 @@
             'type' => 'typo3-cms-extension',
             'install_path' => __DIR__ . '/../../public/typo3conf/ext/vacation_rental',
             'aliases' => array(),
-            'reference' => 'd67ed4861932cb0a095189eccd25899435730434',
+            'reference' => '1c04ea6db8a8dbff0a92699b8480095b6be98127',
             'dev_requirement' => false,
+        ),
+        'gowords/vacationrental' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => '1.0.0',
+            ),
         ),
         'guzzlehttp/guzzle' => array(
             'pretty_version' => '6.5.5',
@@ -664,7 +661,7 @@
                 0 => '2.9.11',
             ),
         ),
-        'typo3-ter/vacation-rental' => array(
+        'typo3-ter/vacationrental' => array(
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '1.0.0',
@@ -694,7 +691,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e97f1ed91370a0e02e3188dd6d7b2081d140c4f2',
+            'reference' => '9ba00517913fa7d1d5f4a7fca4a935af8f95de72',
             'dev_requirement' => false,
         ),
         'typo3/cms-belog' => array(
