@@ -95,7 +95,6 @@ class ComposerStaticInit494ffced0474f512363a71023d2f8971
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\PropertyInfo\\' => 31,
             'Symfony\\Component\\PropertyAccess\\' => 33,
-            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\Mailer\\' => 25,
             'Symfony\\Component\\Inflector\\' => 28,
@@ -124,11 +123,6 @@ class ComposerStaticInit494ffced0474f512363a71023d2f8971
         'M' => 
         array (
             'Masterminds\\' => 12,
-        ),
-        'H' => 
-        array (
-            'Helhum\\Typo3Console\\' => 20,
-            'Helhum\\ConfigLoader\\' => 20,
         ),
         'G' => 
         array (
@@ -369,10 +363,6 @@ class ComposerStaticInit494ffced0474f512363a71023d2f8971
         array (
             0 => __DIR__ . '/..' . '/symfony/property-access',
         ),
-        'Symfony\\Component\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/process',
-        ),
         'Symfony\\Component\\Mime\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
@@ -462,15 +452,6 @@ class ComposerStaticInit494ffced0474f512363a71023d2f8971
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
-        ),
-        'Helhum\\Typo3Console\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/helhum/typo3-console/Classes/Console',
-            1 => __DIR__ . '/..' . '/helhum/typo3-console/Classes/Compatibility',
-        ),
-        'Helhum\\ConfigLoader\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/helhum/config-loader/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (

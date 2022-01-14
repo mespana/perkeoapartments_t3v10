@@ -13,20 +13,14 @@
 	"description" : "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
 	"config": {
-		"platform": {
-			"php": "7.2"
-		},
-		"allow-plugins": {
-			"third-party/required-plugin": true,
-			"my-organization/*": true,
-			"unnecessary/plugin": false
-		},
+				"platform": {
+								"php": "7.2"
+						},
 		"sort-packages": true
 	},
 	"require": {
 		"dmind/cookieman": "^2.9",
 		"gowords/vacation-rental": "^1.0",
-		"helhum/typo3-console": "^6.6",
 		"typo3/cms-backend": "^10.4",
 		"typo3/cms-belog": "^10.4",
 		"typo3/cms-beuser": "^10.4",
@@ -54,7 +48,8 @@
 	},
 	"scripts":{
 		"typo3-cms-scripts": [
-				"typo3cms install:fixfolderstructure"
+				"typo3cms install:fixfolderstructure",
+				"typo3cms install:generatepackagestates"
 		],
 		"post-autoload-dump": [
 				"@typo3-cms-scripts"

@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '67e10e73925a52cd0326616441c913e09695087a',
+        'reference' => 'e97f1ed91370a0e02e3188dd6d7b2081d140c4f2',
         'name' => 'typo3/cms-base-distribution',
         'dev' => true,
     ),
@@ -165,24 +165,6 @@
             'replaced' => array(
                 0 => '*',
             ),
-        ),
-        'helhum/config-loader' => array(
-            'pretty_version' => 'v0.12.4',
-            'version' => '0.12.4.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../helhum/config-loader',
-            'aliases' => array(),
-            'reference' => 'db87de92730e7ebead47b88aa14746d0b8653ba9',
-            'dev_requirement' => false,
-        ),
-        'helhum/typo3-console' => array(
-            'pretty_version' => 'v6.6.0',
-            'version' => '6.6.0.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../helhum/typo3-console',
-            'aliases' => array(),
-            'reference' => '88ee3c73b8b92c6319b7533fcfc88d58a20acd32',
-            'dev_requirement' => false,
         ),
         'lolli42/finediff' => array(
             'pretty_version' => '1.0.0',
@@ -616,15 +598,6 @@
             'reference' => '5de4ba2d41b15f9bd0e19b2ab9674135813ec98f',
             'dev_requirement' => false,
         ),
-        'symfony/process' => array(
-            'pretty_version' => 'v4.4.36',
-            'version' => '4.4.36.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../symfony/process',
-            'aliases' => array(),
-            'reference' => 'a35d6b8f82e2272504f23a267de49b8717ca0028',
-            'dev_requirement' => false,
-        ),
         'symfony/property-access' => array(
             'pretty_version' => 'v4.4.36',
             'version' => '4.4.36.0',
@@ -691,12 +664,6 @@
                 0 => '2.9.11',
             ),
         ),
-        'typo3-ter/typo3-console' => array(
-            'dev_requirement' => false,
-            'replaced' => array(
-                0 => 'v6.6.0',
-            ),
-        ),
         'typo3-ter/vacation-rental' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -727,7 +694,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '67e10e73925a52cd0326616441c913e09695087a',
+            'reference' => 'e97f1ed91370a0e02e3188dd6d7b2081d140c4f2',
             'dev_requirement' => false,
         ),
         'typo3/cms-belog' => array(
